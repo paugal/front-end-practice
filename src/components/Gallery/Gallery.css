@@ -1,0 +1,15 @@
+.gallery{
+    display: flex;
+    gap: 3rem;
+}
+
+.gallery-item{
+    height: 150px;
+    width: 150px;
+    background-color: aliceblue;
+    border-radius: 7%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+

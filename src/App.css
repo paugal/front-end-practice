@@ -1,40 +1,75 @@
 .App {
   text-align: left;
   display: flex;
-  justify-content: center;;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  flex-direction: column;
+  font-family: "Montserrat", sans-serif;
+  min-width: 100%;
+    min-height: 100%;
+}
+body, html {
+  height: 100%;
+  margin: 0;
+  height: 100vh;
+}
+
+#root{
+  height: 100%;
+}
+
+.App h1{
+  font-size: 5rem;
+  font-weight: 700;
   color: white;
+  margin-bottom: 0rem;
+}
+.App h2{
+  font-size: 2rem;
+  font-weight: 500;
+  color: white;
+  margin: 0rem 0rem  2rem 2rem;
 }
 
-.App-link {
-  color: #61dafb;
+@keyframes whoosh {
+  0% { background-position-x: 0 }
+  100% { background-position-x: 100% }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.animated-thing {
+  animation-name: whoosh;
+  animation-duration: 2000ms;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+/* Credits to https://www.gradient-animator.com/ */
+.App {
+  background: linear-gradient(196deg, #41e0b7, #248cb5, #41e0b7);
+  background-size: 600% 600%;
+
+  -webkit-animation: AnimationName 35s ease infinite;
+  -moz-animation: AnimationName 35s ease infinite;
+  -o-animation: AnimationName 35s ease infinite;
+  animation: AnimationName 35s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+  0%{background-position:73% 0%}
+  50%{background-position:28% 100%}
+  100%{background-position:73% 0%}
+}
+@-moz-keyframes AnimationName {
+  0%{background-position:73% 0%}
+  50%{background-position:28% 100%}
+  100%{background-position:73% 0%}
+}
+@-o-keyframes AnimationName {
+  0%{background-position:73% 0%}
+  50%{background-position:28% 100%}
+  100%{background-position:73% 0%}
+}
+@keyframes AnimationName {
+  0%{background-position:73% 0%}
+  50%{background-position:28% 100%}
+  100%{background-position:73% 0%}
 }
