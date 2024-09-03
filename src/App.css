@@ -1,13 +1,12 @@
-
-body, html {
+body,
+html {
   height: 100%;
   margin: 0;
   height: 100vh;
   font-family: sans-serif;
-  
 }
 
-#root{
+#root {
   height: 100%;
 }
 
@@ -23,22 +22,28 @@ body, html {
   transition: all 1s ease-in-out;
 }
 
-.App h1{
+.App h1 {
   font-size: 5rem;
   font-weight: 700;
   color: white;
   margin-bottom: 0rem;
 }
-.App h2{
+
+.App h2 {
   font-size: 2rem;
   font-weight: 500;
   color: white;
-  margin: 0rem 0rem  2rem 2rem;
+  margin: 0rem 0rem 2rem 2rem;
 }
 
 @keyframes whoosh {
-  0% { background-position-x: 0 }
-  100% { background-position-x: 100% }
+  0% {
+    background-position-x: 0
+  }
+
+  100% {
+    background-position-x: 100%
+  }
 }
 
 .animated-thing {
@@ -60,22 +65,57 @@ body, html {
 }
 
 @-webkit-keyframes AnimationName {
-  0%{background-position:73% 0%}
-  50%{background-position:28% 100%}
-  100%{background-position:73% 0%}
+  0% {
+    background-position: 73% 0%
+  }
+
+  50% {
+    background-position: 28% 100%
+  }
+
+  100% {
+    background-position: 73% 0%
+  }
 }
+
 @-moz-keyframes AnimationName {
-  0%{background-position:73% 0%}
-  50%{background-position:28% 100%}
-  100%{background-position:73% 0%}
+  0% {
+    background-position: 73% 0%
+  }
+
+  50% {
+    background-position: 28% 100%
+  }
+
+  100% {
+    background-position: 73% 0%
+  }
 }
+
 @-o-keyframes AnimationName {
-  0%{background-position:73% 0%}
-  50%{background-position:28% 100%}
-  100%{background-position:73% 0%}
+  0% {
+    background-position: 73% 0%
+  }
+
+  50% {
+    background-position: 28% 100%
+  }
+
+  100% {
+    background-position: 73% 0%
+  }
 }
+
 @keyframes AnimationName {
-  0%{background-position:73% 0%}
-  50%{background-position:28% 100%}
-  100%{background-position:73% 0%}
+  0% {
+    background-position: 73% 0%
+  }
+
+  50% {
+    background-position: 28% 100%
+  }
+
+  100% {
+    background-position: 73% 0%
+  }
 }
