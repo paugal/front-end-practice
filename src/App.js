@@ -21,6 +21,7 @@ function App() {
 
   return (
     <div className="App">
+      <span className="warning">This porfolio is work in progress 😓</span>
       <h1>React Showcase</h1>
       <h2>Pau Galan Gutierrez</h2>
       <GalleryItemOpenContext.Provider value={value}>
