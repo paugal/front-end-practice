@@ -11,6 +11,8 @@ const componentList = [
   "Load File",
   "Image Carousel",
   "Game Collection",
+  "WhatToWatch",
+  "MORE: Mobility Report",
 ];
 
 function App() {

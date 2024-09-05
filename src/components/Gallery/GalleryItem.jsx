@@ -6,6 +6,8 @@ import ReportForm from "../Form/formReport";
 import ImageCarousel from "../ImageCarousel/ImageCarousel";
 import GameCollection from "../GameCollection/GameCollection";
 import GalleryItemOpenContext from "../../context/GalleryItemOpenContext";
+import WhatToWatch from "../WhatToWatch/WhatToWatch";
+import More from "../MORE/More";
 
 export default function GalleryItem({ componentName }) {
   const [showContent, setShowContent] = useState(false);
@@ -25,6 +27,10 @@ export default function GalleryItem({ componentName }) {
         return <ImageCarousel />;
       case "Game Collection":
         return <GameCollection />;
+      case "WhatToWatch":
+        return <WhatToWatch />;
+      case "MORE: Mobility Report":
+        return <More />;
       default:
         return <div>Empty Component</div>;
     }
