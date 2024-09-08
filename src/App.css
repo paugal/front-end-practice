@@ -4,10 +4,20 @@ html {
   margin: 0;
   height: 100vh;
   font-family: sans-serif;
+  position: relative;
+  overflow-x: hidden;
+  background-color: #99d0d9;
 }
 
 #root {
   height: 100%;
+  --titleFont: "acorn", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+@font-face {
+  font-family: "Acorn";
+  src: local("acorn"),
+    url("./assets/fonts/acorn.woff") format("truetype");
 }
 
 .App {
@@ -20,6 +30,7 @@ html {
   min-height: 100%;
   align-items: center;
   transition: all 1s ease-in-out;
+  position: relative;
 }
 
 .warning {
@@ -33,19 +44,38 @@ html {
   z-index: 9999;
 }
 
-.App h1 {
-  font-size: 5rem;
-  font-weight: 700;
-  color: white;
-  margin-bottom: 0rem;
+.home-title {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
 }
 
-.App h2 {
-  font-size: 2rem;
-  font-weight: 500;
-  color: white;
-  margin: 0rem 0rem 2rem 2rem;
+.home-title h1 {
+  font-size: 8rem;
+  font-weight: 700;
+  color: #023C59;
+  margin-bottom: 0rem;
+  font-family: "Acorn";
+  position: relative;
 }
+
+
+.home-title h2 {
+  font-size: 6rem;
+  font-weight: 500;
+  color: #023C59;
+  font-family: "Acorn";
+  margin: 0rem 0rem 2rem 0rem;
+}
+
+.home-title span {
+  font-size: 1.5rem;
+  width: 50%;
+  font-weight: 500;
+}
+
 
 @keyframes whoosh {
   0% {
@@ -64,15 +94,48 @@ html {
   animation-iteration-count: infinite;
 }
 
+.contact-bar {
+  display: flex;
+  margin: 2rem;
+  gap: 2rem;
+  padding: 1rem;
+  background: #c9dadc;
+  border-radius: 50px;
+  filter: blur(0.5);
+}
+
+.transition-background {
+  width: 100vw;
+  height: 100px;
+  position: absolute;
+  background: black;
+  z-index: 0;
+  bottom: 0;
+  background: #99d0d9;
+  background: linear-gradient(0deg, rgba(153, 208, 217, 1) 20%, rgba(36, 140, 181, 0) 100%);
+}
+
 /* Credits to https://www.gradient-animator.com/ */
-.App {
-  background: linear-gradient(196deg, #41e0b7, #248cb5, #41e0b7);
+.blur-background {
+  /* background: linear-gradient(196deg, #41e0b7, #248cb5, #41e0b7); */
+  z-index: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  overflow: hidden;
+  opacity: .5;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  background: linear-gradient(196deg, #83e8ce, #5eb3d4, #83e8ce);
+
   background-size: 600% 600%;
 
-  -webkit-animation: AnimationName 35s ease infinite;
-  -moz-animation: AnimationName 35s ease infinite;
-  -o-animation: AnimationName 35s ease infinite;
-  animation: AnimationName 35s ease infinite;
+  -webkit-animation: AnimationName 15s ease infinite;
+  -moz-animation: AnimationName 15s ease infinite;
+  -o-animation: AnimationName 15s ease infinite;
+  animation: AnimationName 15s ease infinite;
 }
 
 @-webkit-keyframes AnimationName {
