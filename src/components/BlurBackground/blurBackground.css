@@ -1,0 +1,152 @@
+.canvas-container {
+    width: 100vw;
+    height: 100vh;
+    background-color: #99d0d9;
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    overflow: hidden;
+}
+
+.transition-background {
+    width: 100vw;
+    height: 100px;
+    position: absolute;
+    background: black;
+    z-index: 0;
+    bottom: 0;
+    background: #99d0d9;
+    background: linear-gradient(0deg, rgba(153, 208, 217, 1) 20%, rgba(36, 140, 181, 0) 100%);
+}
+
+.elipsis1 {
+    width: 500px;
+    height: 200px;
+    background-color: rgb(163, 186, 84);
+    border-radius: 50%;
+    position: absolute;
+    animation: move1 50s infinite alternate ease-in-out;
+}
+
+@keyframes move1 {
+    0% {
+        transform: translate(0, 0) scale(1) rotate(0deg);
+    }
+
+    25% {
+        transform: translate(150%, 50%) scale(1.2) rotate(45deg);
+    }
+
+    50% {
+        transform: translate(-100%, 200%) scale(0.8) rotate(90deg);
+    }
+
+    75% {
+        transform: translate(50%, -50%) scale(1.5) rotate(135deg);
+    }
+
+    100% {
+        transform: translate(0, 0) scale(1) rotate(180deg);
+    }
+}
+
+/* Elipse 2 */
+.elipsis2 {
+    width: 500px;
+    height: 200px;
+    background-color: rgb(27, 80, 21);
+    border-radius: 50%;
+    position: absolute;
+    animation: move2 50s infinite alternate ease-in-out;
+}
+
+@keyframes move2 {
+    0% {
+        transform: translateX(200%) scale(1) rotate(0deg);
+    }
+
+    25% {
+        transform: translateX(50%) scale(0.9) rotate(30deg);
+    }
+
+    50% {
+        transform: translateX(-150%) scale(1.3) rotate(60deg);
+    }
+
+    75% {
+        transform: translateX(100%) scale(1.1) rotate(90deg);
+    }
+
+    100% {
+        transform: translateX(200%) scale(1) rotate(120deg);
+    }
+}
+
+/* Nueva forma 1: Círculo */
+.circulo {
+    width: 150px;
+    height: 150px;
+    background-color: rgb(255, 255, 255);
+    /* Color rojo */
+    border-radius: 50%;
+    position: absolute;
+    animation: move3 40s infinite alternate ease-in-out;
+}
+
+@keyframes move3 {
+    0% {
+        transform: translate(600%, 300%) scale(1) rotate(0deg);
+    }
+
+    50% {
+        transform: translate(0%, 200%) scale(1.5) rotate(180deg);
+        /* Movimiento circular */
+    }
+
+    100% {
+        transform: translate(600%, 0%) scale(1) rotate(360deg);
+    }
+}
+
+/* Nueva forma 2: Cuadrado */
+.cuadrado {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(229, 244, 25);
+    /* Color azul */
+    position: absolute;
+    animation: move4 40s infinite alternate cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    /* Efecto de rebote */
+}
+
+@keyframes move4 {
+    0% {
+        transform: translate(150%, 150%) scale(1) rotate(0deg);
+    }
+
+    25% {
+        transform: translate(350%, 350%) scale(1.2) rotate(45deg);
+    }
+
+    50% {
+        transform: translate(-50%, 50%) scale(0.8) rotate(-45deg);
+    }
+
+    75% {
+        transform: translate(100%, -100%) scale(1.5) rotate(90deg);
+    }
+
+    100% {
+        transform: translate(0%, 0%) scale(1) rotate(180deg);
+    }
+}
+
+.blur-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(150px);
+    pointer-events: none;
+}

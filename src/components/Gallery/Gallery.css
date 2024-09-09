@@ -11,7 +11,7 @@
 .gallery-item {
     height: 500px;
     width: 500px;
-    background-color: aliceblue;
+    background-color: #a3dcd4;
     border-radius: 7%;
     display: flex;
     justify-content: center;
@@ -19,6 +19,9 @@
     transition: all 200ms ease-in-out;
     text-align: center;
     z-index: 1;
+    position: relative;
+    overflow: hidden;
+    transition: all 200ms ease-in-out;
 }
 
 .gallery-item:hover {
@@ -26,6 +29,31 @@
     font-weight: 600;
     transform: translateY(-5px);
     transition: all 200ms ease-in-out;
+}
+
+.gallery-item h3 {
+    position: absolute;
+    top: 70px;
+    font-family: 'Acorn';
+    font-size: 2rem;
+    transition: all 200ms ease-in-out;
+}
+
+.gallery-item:hover h3 {
+    top: 60px;
+}
+
+.gallery-item img {
+    position: absolute;
+    height: 500px;
+    border-radius: 10px;
+    bottom: -200px;
+    transition: all 200ms ease-in-out;
+
+}
+
+.gallery-item:hover img {
+    bottom: -150px;
 }
 
 .popUpItem {

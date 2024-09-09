@@ -9,11 +9,45 @@ import GalleryItemOpenContext from "../../context/GalleryItemOpenContext";
 import WhatToWatch from "../WhatToWatch/WhatToWatch";
 import More from "../MORE/More";
 
+import { motion } from "framer-motion";
+
+import gameCollectionImg from "./images/gameCollection.png";
+import whattowatchimg from "./images/whattowatch.png";
+import moreImg from "./images/more.png";
+
 export default function GalleryItem({ componentName }) {
   const [showContent, setShowContent] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
   const elementRef = useRef(null);
   const { itemOpen, setItemOpen } = useContext(GalleryItemOpenContext);
+
+  const imageMap = {
+    Accordion: gameCollectionImg,
+    "Load File": gameCollectionImg,
+    "Report Form": gameCollectionImg,
+    "Image Carousel": gameCollectionImg,
+    "Game Collection": gameCollectionImg,
+    WhatToWatch: whattowatchimg,
+    "MORE: Mobility Report": moreImg,
+  };
+
+  const backgroundColorMap = {
+    Accordion: "#FFEB3B", // Yellow
+    "Load File": "#00BCD4", // Cyan
+    "Report Form": "#FF9800", // Orange
+    "Image Carousel": "#2196F3", // Blue
+    "Game Collection": "#4CAF50", // Green
+    WhatToWatch: "#F44336", // Red
+    "MORE: Mobility Report": "#EC7EFF", // Purple
+  };
+
+  const getBackgroundColorForComponent = (componentName) => {
+    return backgroundColorMap[componentName] || "#E0E0E0"; // Default gray
+  };
+
+  const getImageForComponent = (componentName) => {
+    return imageMap[componentName] || gameCollectionImg;
+  };
 
   function renderSwitch() {
     switch (componentName) {
@@ -65,10 +99,22 @@ export default function GalleryItem({ componentName }) {
 
   return (
     <>
-      <div onClick={changeShowContent} className="gallery-item">
-        {" "}
-        {componentName}{" "}
-      </div>
+      <motion.h1
+        initial={{ opacity: 0, y: -30 }} // Start state
+        animate={{ opacity: 1, y: 0 }} // End state (animation)
+        transition={{ delay: 0.4, duration: 0.8 }} // Animation duration
+      >
+        <div
+          onClick={changeShowContent}
+          className="gallery-item"
+          style={{
+            backgroundColor: getBackgroundColorForComponent(componentName),
+          }}
+        >
+          <h3>{componentName}</h3>
+          <img src={getImageForComponent(componentName)} alt={componentName} />
+        </div>
+      </motion.h1>
       {showContent && (
         <div
           ref={elementRef}

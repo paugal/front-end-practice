@@ -95,25 +95,39 @@ html {
 }
 
 .contact-bar {
+  position: relative;
   display: flex;
   margin: 2rem;
-  gap: 2rem;
-  padding: 1rem;
+  gap: 1rem;
   background: #c9dadc;
   border-radius: 50px;
   filter: blur(0.5);
+  z-index: 1;
+  font-weight: 400;
+  font-size: 1.5rem;
+  padding: 1rem 1.8rem;
+  transition: all 200ms ease-in-out;
 }
 
-.transition-background {
-  width: 100vw;
-  height: 100px;
-  position: absolute;
-  background: black;
-  z-index: 0;
-  bottom: 0;
-  background: #99d0d9;
-  background: linear-gradient(0deg, rgba(153, 208, 217, 1) 20%, rgba(36, 140, 181, 0) 100%);
+.contact-bar:hover {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
+
+.contact-item {
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  background-color: rgba(255, 255, 255, 0);
+  transition: all 200ms ease-in-out;
+}
+
+.contact-item:hover {
+  background-color: rgba(255, 255, 255, 0.53);
+  border-radius: 50px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  transform: scale(1.05);
+
+}
+
 
 /* Credits to https://www.gradient-animator.com/ */
 .blur-background {
