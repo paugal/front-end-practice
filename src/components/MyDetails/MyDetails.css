@@ -117,7 +117,11 @@
 }
 
 .education {
-    margin-left: 2rem;
+    margin-left: 3rem;
+}
+
+.experience-text {
+    margin-left: 1.5rem;
 }
 
 .certifications ul {
@@ -130,6 +134,7 @@
 }
 
 .experience h3 {
+
     transition: all 300ms ease-in-out;
 }
 
@@ -138,6 +143,7 @@
 }
 
 .certifications h3 {
+    margin-left: 1.5rem;
     transition: all 300ms ease-in-out;
 }
 

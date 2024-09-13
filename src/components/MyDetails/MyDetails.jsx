@@ -71,9 +71,11 @@ export default function MyDetails() {
           <div className="my-info">
             <div className="experience">
               <h3>Work Experience</h3>
-              <span>
-                More than 2 year in Capgemini, developing webs with React.
-              </span>
+              <div className="experience-text">
+                <span>
+                  More than 2 year in Capgemini, developing webs with React.
+                </span>
+              </div>
             </div>
             <div className="education">
               <h3> Education</h3>

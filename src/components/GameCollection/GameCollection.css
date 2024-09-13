@@ -24,6 +24,9 @@
 .game-collection-text span {
     color: black;
     width: 90%;
+    line-height: 1.6;
+    letter-spacing: 0.5px;
+    font-size: 1.1rem;
 
 }
 
