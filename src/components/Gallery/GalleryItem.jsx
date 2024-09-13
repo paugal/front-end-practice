@@ -14,6 +14,7 @@ import { motion } from "framer-motion";
 import gameCollectionImg from "./images/gameCollection.png";
 import whattowatchimg from "./images/whattowatch.png";
 import moreImg from "./images/more.png";
+import misc from "./images/02.png";
 
 export default function GalleryItem({ componentName }) {
   const [showContent, setShowContent] = useState(false);
@@ -22,10 +23,10 @@ export default function GalleryItem({ componentName }) {
   const { itemOpen, setItemOpen } = useContext(GalleryItemOpenContext);
 
   const imageMap = {
-    Accordion: gameCollectionImg,
-    "Load File": gameCollectionImg,
-    "Report Form": gameCollectionImg,
-    "Image Carousel": gameCollectionImg,
+    Accordion: misc,
+    "Load File": misc,
+    "Report Form": misc,
+    "Image Carousel": misc,
     "Game Collection": gameCollectionImg,
     WhatToWatch: whattowatchimg,
     "MORE: Mobility Report": moreImg,

@@ -8,6 +8,7 @@ import { motion } from "framer-motion";
 import "./assets/fonts/acorn.woff";
 
 import GalleryItemOpenContext from "./context/GalleryItemOpenContext.jsx";
+import MyDetails from "./components/MyDetails/MyDetails.jsx";
 
 const componentList = [
   "Game Collection",
@@ -52,18 +53,10 @@ function App() {
           </span>
         </div>
       </motion.h1>
-      <motion.h1
-        initial={{ opacity: 0, y: -30 }} // Start state
-        animate={{ opacity: 1, y: 0 }} // End state (animation)
-        transition={{ delay: 0.2, duration: 0.8 }} // Animation duration
-      >
-        <div className="contact-bar">
-          <div className="contact-item"> Github </div>
-          <div className="contact-item"> LinkedIn </div>
-          <div className="contact-item"> CV </div>
-          <div className="contact-item"> Contact Me</div>
-        </div>
-      </motion.h1>
+
+      <MyDetails />
+      <h1 className="projects-title">Projects</h1>
+
       <GalleryItemOpenContext.Provider value={value}>
         <div className="gallery">
           {componentList.map((el, index) => (
