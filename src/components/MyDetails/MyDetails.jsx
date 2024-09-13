@@ -8,8 +8,7 @@ import Star from "../../assets/imgs/star.svg";
 export default function MyDetails() {
   return (
     <div className="my-details">
-      {" "}
-      <motion.h1
+      <motion.div
         initial={{ opacity: 0, y: -30 }} // Start state
         animate={{ opacity: 1, y: 0 }} // End state (animation)
         transition={{ delay: 0.2, duration: 0.8 }} // Animation duration
@@ -43,31 +42,31 @@ export default function MyDetails() {
           </div>
           <div className="contact-item"> Contact Me</div>
         </div>
-      </motion.h1>
-      <motion.h1
+      </motion.div>
+      <motion.div
         initial={{ opacity: 0, y: -30 }} // Start state
         animate={{ opacity: 1, y: 0 }} // End state (animation)
         transition={{ delay: 0.3, duration: 0.8 }} // Animation duration
       >
         <div className="image-details">
           <div className="img-icons">
-            <motion.h1
+            <motion.div
               initial={{ opacity: 0, y: -30 }} // Start state
               animate={{ opacity: 1, y: 0 }} // End state (animation)
               transition={{ delay: 0.4, duration: 0.8 }} // Animation duration
             >
               <img className="start01" src={Star} alt="star icon" />
-            </motion.h1>
+            </motion.div>
             <div className="avatar-image">
               <img src={Avatar} alt="img-of-me" />
             </div>
-            <motion.h1
-              initial={{ opacity: 0, y: -30 }} // Start state
-              animate={{ opacity: 1, y: 0 }} // End state (animation)
+            <motion.div
+              initial={{ opacity: 0, y: -40 }} // Start state
+              animate={{ opacity: 1, y: -30 }} // End state (animation)
               transition={{ delay: 0.4, duration: 0.8 }} // Animation duration
             >
               <img className="start02" src={Star} alt="star icon" />
-            </motion.h1>
+            </motion.div>
           </div>
           <div className="my-info">
             <div className="experience">
@@ -92,7 +91,7 @@ export default function MyDetails() {
             </div>
           </div>
         </div>
-      </motion.h1>
+      </motion.div>
     </div>
   );
 }

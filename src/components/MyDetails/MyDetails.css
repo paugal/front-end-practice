@@ -48,23 +48,32 @@
 
 .image-details {
     display: flex;
-    gap: 2rem;
+    gap: 4rem;
     align-items: center;
     margin-top: 3rem;
 }
 
+
+
 .img-icons {
     display: relative;
+    transition: all 300ms ease-in-out;
+}
+
+.img-icons:hover {
+    transform: scale(1.01) translateY(-5px);
+
 }
 
 .start01 {
     position: absolute;
     left: 450px;
+    filter: drop-shadow(3px 5px 2px rgba(0, 0, 0, 0.1));
 }
 
 .start02 {
     position: absolute;
-    bottom: 10px;
+    filter: drop-shadow(3px 5px 2px rgba(0, 0, 0, 0.1));
 }
 
 .avatar-image {
@@ -77,13 +86,13 @@
     border: 6px solid white;
     display: flex;
     justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 
 }
 
 .avatar-image img {
-    height: 100%;
-    margin-top: 3rem;
-
+    height: 120%;
+    margin-top: 2rem;
 }
 
 .my-info {
@@ -91,12 +100,20 @@
     flex-direction: column;
     gap: 3rem;
     margin-bottom: 3rem;
+    max-width: 800px;
+    transition: all 300ms ease-in-out;
 }
 
 .my-info h3 {
     font-family: 'Acorn';
-    font-size: 2rem;
+    font-size: 2.3rem;
     margin-bottom: 0.5rem;
+}
+
+.my-info span,
+.my-info li {
+    font-size: 1.8rem;
+    font-weight: 600;
 }
 
 .education {
@@ -105,8 +122,33 @@
 
 .certifications ul {
     padding: 0px;
+    margin: 0px;
 }
 
 .certifications li {
     display: block;
+}
+
+.experience h3 {
+    transition: all 300ms ease-in-out;
+}
+
+.education h3 {
+    transition: all 300ms ease-in-out;
+}
+
+.certifications h3 {
+    transition: all 300ms ease-in-out;
+}
+
+.experience:hover h3 {
+    transform: scale(1.01);
+}
+
+.education:hover h3 {
+    transform: scale(1.01);
+}
+
+.certifications:hover h3 {
+    transform: scale(1.01);
 }

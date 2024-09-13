@@ -14,10 +14,7 @@ const componentList = [
   "Game Collection",
   "WhatToWatch",
   "MORE: Mobility Report",
-  "Report Form",
-  "Load File",
-  "Image Carousel",
-  "Accordion",
+  "Miscellaneous",
 ];
 
 function App() {

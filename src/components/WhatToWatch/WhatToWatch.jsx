@@ -25,7 +25,7 @@ export default function WhatToWatch() {
 
       <div className="link-to-watch">
         <a
-          href="https://paugal.github.io/whattowatch/"
+          href="https://paugal.github.io/whattowatch/#/popular"
           target="_blank"
           rel="noopener noreferrer"
         >

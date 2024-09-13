@@ -1,13 +1,11 @@
 import React, { useState, useEffect, useRef, useContext } from "react";
 import "./Gallery.css";
-import Accordion from "../Accordion/Accordion";
-import LoadFile from "../LoadFile/LoadFile";
-import ReportForm from "../Form/formReport";
-import ImageCarousel from "../ImageCarousel/ImageCarousel";
+
 import GameCollection from "../GameCollection/GameCollection";
 import GalleryItemOpenContext from "../../context/GalleryItemOpenContext";
 import WhatToWatch from "../WhatToWatch/WhatToWatch";
 import More from "../MORE/More";
+import Miscellaneous from "../Miscellaneous/Miscellaneous";
 
 import { motion } from "framer-motion";
 
@@ -23,23 +21,17 @@ export default function GalleryItem({ componentName }) {
   const { itemOpen, setItemOpen } = useContext(GalleryItemOpenContext);
 
   const imageMap = {
-    Accordion: misc,
-    "Load File": misc,
-    "Report Form": misc,
-    "Image Carousel": misc,
     "Game Collection": gameCollectionImg,
     WhatToWatch: whattowatchimg,
     "MORE: Mobility Report": moreImg,
+    Miscellaneous: misc,
   };
 
   const backgroundColorMap = {
-    Accordion: "#FFEB3B", // Yellow
-    "Load File": "#00BCD4", // Cyan
-    "Report Form": "#FF9800", // Orange
-    "Image Carousel": "#2196F3", // Blue
-    "Game Collection": "#4CAF50", // Green
-    WhatToWatch: "#F44336", // Red
-    "MORE: Mobility Report": "#EC7EFF", // Purple
+    "Game Collection": "#4CAF50",
+    WhatToWatch: "#F44336",
+    "MORE: Mobility Report": "#EC7EFF",
+    Miscellaneous: "#FF9800",
   };
 
   const getBackgroundColorForComponent = (componentName) => {
@@ -52,20 +44,14 @@ export default function GalleryItem({ componentName }) {
 
   function renderSwitch() {
     switch (componentName) {
-      case "Accordion":
-        return <Accordion />;
-      case "Load File":
-        return <LoadFile />;
-      case "Report Form":
-        return <ReportForm />;
-      case "Image Carousel":
-        return <ImageCarousel />;
       case "Game Collection":
         return <GameCollection />;
       case "WhatToWatch":
         return <WhatToWatch />;
       case "MORE: Mobility Report":
         return <More />;
+      case "Miscellaneous":
+        return <Miscellaneous />;
       default:
         return <div>Empty Component</div>;
     }
@@ -76,10 +62,12 @@ export default function GalleryItem({ componentName }) {
     if (showContent) {
       setIsVisible(false);
       setTimeout(() => setShowContent(false), 300);
+      document.body.style.overflow = "auto";
       setTimeout(() => setItemOpen(true), 300);
     } else {
       setShowContent(true);
       setTimeout(() => setIsVisible(true), 10);
+      document.body.style.overflow = "hidden";
       setTimeout(() => setItemOpen(false), 10);
     }
   };
@@ -101,9 +89,9 @@ export default function GalleryItem({ componentName }) {
   return (
     <>
       <motion.h1
-        initial={{ opacity: 0, y: -30 }} // Start state
-        animate={{ opacity: 1, y: 0 }} // End state (animation)
-        transition={{ delay: 0.4, duration: 0.8 }} // Animation duration
+        initial={{ opacity: 0, y: -30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.4, duration: 0.8 }}
       >
         <div
           onClick={changeShowContent}
@@ -130,7 +118,7 @@ export default function GalleryItem({ componentName }) {
               close
             </span>
           </div>
-          {renderSwitch()}
+          <div className="popUpItem-container">{renderSwitch()}</div>
         </div>
       )}
     </>

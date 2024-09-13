@@ -2,22 +2,29 @@
     display: flex;
     flex-direction: row;
     gap: 1rem;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4rem;
+
 }
 
 .game-collection-text {
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 35%;
 }
 
 .game-collection-text h1 {
     color: black;
     font-size: 3rem;
+    font-family: 'Acorn';
 }
 
 .game-collection-text span {
     color: black;
-    width: 400px;
+    width: 90%;
+
 }
 
 
