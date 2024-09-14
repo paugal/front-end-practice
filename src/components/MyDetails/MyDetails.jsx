@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { motion } from "framer-motion";
 import "./MyDetails.css";
 
@@ -6,6 +6,7 @@ import Avatar from "../../assets/imgs/avatar.png";
 import Star from "../../assets/imgs/star.svg";
 
 export default function MyDetails() {
+  const [showContact, setShowContact] = useState(false);
   return (
     <div className="my-details">
       <motion.div
@@ -40,7 +41,13 @@ export default function MyDetails() {
               Download CV
             </a>
           </div>
-          <div className="contact-item"> Contact Me</div>
+          <div className="button-contact" >
+            <div className="contact-item" onClick={() => setShowContact(!showContact)}>Contact Me</div> 
+            {showContact ? <div className="contact-dropbox" >
+              <span> (+34) 645188899</span>
+              <span> pau.galan22@gmail.com</span>
+            </div> : null }
+          </div>
         </div>
       </motion.div>
       <motion.div

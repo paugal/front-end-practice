@@ -6,6 +6,8 @@
     align-items: center;
     justify-content: center;
     margin-top: 4rem;
+    overflow: scroll;
+    height: 100%;
 
 }
 

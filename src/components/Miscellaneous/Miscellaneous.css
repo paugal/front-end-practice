@@ -1,0 +1,14 @@
+.misc-container h1, h2 {
+    color: #023C59;
+    margin-bottom: 1rem;
+    margin-top: 0rem;
+}
+
+.misc-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    overflow: scroll;
+    height: 100%;
+}
